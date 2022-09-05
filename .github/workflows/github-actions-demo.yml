@@ -13,7 +13,7 @@ on:
 
 jobs:
   build_post:
-    runs-on: cicd
+    runs-on: ip-172-26-7-83
     steps:
       - name: Hello world action
         run: |
