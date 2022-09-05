@@ -12,7 +12,7 @@ on:
 
 
 jobs:
-  Explore-GitHub-Actions:
+  build_post:
     runs-on: cicd
     steps:
       - name: Hello world action
@@ -20,4 +20,13 @@ jobs:
               bash /home/ubuntu/zsj-test.sh
         env: 
             SCKEY : ${{secrets.TSETTOKEN}}
-
+  pull:
+    runs-on: ca-test
+    needs: build_post
+    steps:
+      - name: Hello world action
+        run: |
+              bash /home/ubuntu/zsj-test.sh
+        env: 
+            SCKEY : ${{secrets.TSETTOKEN}}
+        
