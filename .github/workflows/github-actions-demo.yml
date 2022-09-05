@@ -18,6 +18,7 @@ jobs:
       - name: Hello world action
         run: |
               bash /home/ubuntu/zsj-test.sh
+              python /home/ubuntu/test.py
         env: 
-            TESTTOKEN : ${{secrets.TSETTOKEN}}
+            SCKEY : ${{secrets.TSETTOKEN}}
 
