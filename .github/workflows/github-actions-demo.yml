@@ -16,8 +16,8 @@ jobs:
     runs-on: self-hosted
     steps:
       - name: Hello world action
-
         run: |
-            export TESTTOKEN = ${{ secrets.TESTTOKEN }}
-            bash /home/ubuntu/zsj-test.sh
+              bash /home/ubuntu/zsj-test.sh
+        env: 
+              TESTTOKEN : ${{secrets.TSETTOKEN}}
 
