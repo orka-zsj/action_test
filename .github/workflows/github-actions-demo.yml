@@ -16,5 +16,7 @@ jobs:
   Explore-GitHub-Actions:
     runs-on: self-hosted
     steps:
-      - run: sh /home/ubuntu/zsj-test.sh
+      - run: |
+            sh /home/ubuntu/zsj-test.sh
+            pwd
       
