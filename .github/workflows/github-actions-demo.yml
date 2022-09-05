@@ -13,12 +13,11 @@ on:
 
 jobs:
   Explore-GitHub-Actions:
-    runs-on: self-hosted
+    runs-on: cicd
     steps:
       - name: Hello world action
         run: |
               bash /home/ubuntu/zsj-test.sh
-              python /home/ubuntu/test.py
         env: 
             SCKEY : ${{secrets.TSETTOKEN}}
 
