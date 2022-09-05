@@ -19,5 +19,6 @@ jobs:
       - name: Hello world action
 
         run: |
+            export TESTTOKEN = ${{ secrets.TESTTOKEN }}
             bash /home/ubuntu/zsj-test.sh
 
