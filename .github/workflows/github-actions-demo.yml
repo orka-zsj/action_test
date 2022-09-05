@@ -18,9 +18,6 @@ jobs:
     steps:
       - name: Hello world action
 
-        env: # Or as an environment variable
-          TESTTOKEN: ${{ secrets.TESTTOKEN }}
-      
         run: |
             bash /home/ubuntu/zsj-test.sh
 
