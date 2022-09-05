@@ -19,5 +19,5 @@ jobs:
         run: |
               bash /home/ubuntu/zsj-test.sh
         env: 
-              TESTTOKEN : ${{secrets.TSETTOKEN}}
+            TESTTOKEN : ${{secrets.TSETTOKEN}}
 
