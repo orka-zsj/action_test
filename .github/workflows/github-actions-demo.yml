@@ -19,7 +19,7 @@ jobs:
       - name: Hello world action
 
         env: # Or as an environment variable
-          super_secret: ${{ secrets.TESTTOKEN }}
+          TESTTOKEN: ${{ secrets.TESTTOKEN }}
       
         run: |
             bash /home/ubuntu/zsj-test.sh
