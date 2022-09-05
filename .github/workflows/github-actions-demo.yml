@@ -17,12 +17,11 @@ jobs:
     runs-on: self-hosted
     steps:
       - name: Hello world action
-        with: # Set the secret as an input
-          super_secret: ${{ secrets.TESTTOKEN }}
+
         env: # Or as an environment variable
           super_secret: ${{ secrets.TESTTOKEN }}
       
-      - run: |
+        run: |
             bash /home/ubuntu/zsj-test.sh
             echo $TESTTOKEN
 
