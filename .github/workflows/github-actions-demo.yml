@@ -1,32 +1,21 @@
-# # This is a basic workflow to help you get started with Actions
+# This is a basic workflow to help you get started with Actions
 
-# name: GitHub Actions Demo
+name: GitHub Actions Demo
 
-# # Controls when the workflow will run
-# on:
-#   # Triggers the workflow on push or pull request events but only for the "main" branch
-#   push:
-#     branches: [ "main" ]
-#   merge_group:
-#     branches: [ "main" ]
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the "main" branch
+  workflow_dispatch:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
 
 
-# jobs:
-#   build_post:
-#     runs-on: cicd
-#     steps:
-#       - name: Hello world action
-#         run: |
-#               bash /home/ubuntu/zsj-test.sh
-#         env: 
-#             SCKEY : ${{secrets.TSETTOKEN}}
-#   pull:
-#     runs-on: ca-test
-#     needs: build_post
-#     steps:
-#       - name: Hello world action
-#         run: |
-#               bash /home/ubuntu/test.sh
-#         env: 
-#             SCKEY : ${{secrets.TSETTOKEN}}
-        
+jobs:
+  build_post:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Hello world action
+        run: echo "test"
+
